@@ -10,6 +10,7 @@
         "@modules/*": ["app/modules/*"],
         "@store/*": ["app/store/*"],
         "@layouts/*":["app/layouts/*"],
+        "@services/*":["app/services/*"],
         "@shared/*": ["shared/*"],
       }
     }

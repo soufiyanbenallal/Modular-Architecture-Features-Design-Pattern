@@ -13,6 +13,7 @@ module.exports = {
       '@env': path.resolve(__dirname, 'src/env'),
       '@shared': path.resolve(__dirname, 'src/shared'),
       '@hooks': path.resolve(__dirname, 'src/app/hooks'),
+      '@services': path.resolve(__dirname, 'src/app/services'),
       '@modules': path.resolve(__dirname, 'src/app/modules'),
       '@store': path.resolve(__dirname, 'src/app/store'),
     }
