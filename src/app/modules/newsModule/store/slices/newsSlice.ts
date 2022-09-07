@@ -1,9 +1,13 @@
+import { IEndpointCallNews } from '@modules/newsModule/interfaces/endpointInterface'
+import { INewsState } from '@modules/newsModule/interfaces/newsInterface'
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
+import { IErrorResponse } from '@shared/interfaces/errors/errorsInterface'
 
-export const initialState: any = {
+
+export const initialState: INewsState = {
   loading: false,
   error: null,
-  news: {} as any,
+  data: {},
 }
 
 // A slice for news with our 3 reducers
@@ -12,19 +16,19 @@ const newsSlice = createSlice({
   initialState,
   reducers: {
     // start loading and trigger saga to get news
-    getNews: (state, { payload }) => {
+    getNews: (state, action) => {
       state.loading = true
     },
 
     // successed fetching news
-    getNewsSuccess: (state, { payload }: PayloadAction<any>) => {
-      state.news = payload
+    getNewsSuccess: (state, { payload }: PayloadAction<IEndpointCallNews>) => {
+      state.data = payload
       state.loading = false
       state.error = null
     },
 
     // i use any because i dont know the type of error will return from the request
-    getNewsFailure: (state, { payload }: PayloadAction<any>) => {
+    getNewsFailure: (state, { payload }: PayloadAction<IErrorResponse>) => {
       state.loading = false
       state.error = payload
     }
@@ -36,7 +40,7 @@ const newsSlice = createSlice({
 export const { getNews, getNewsSuccess, getNewsFailure } = newsSlice.actions
 
 // the selectore 
-export const newsSelector = (state : any) => state.news
+export const newsSelector = ({news}: {news: INewsState}) => news
 
 // The reducer 
 export default newsSlice.reducer

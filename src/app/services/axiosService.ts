@@ -17,8 +17,8 @@ import axios from "axios";
 // const AxiosInstance = axios.create()
 
 axios.defaults.headers.common = {
-    'X-RapidAPI-Key': process.env.REACT_APP_API_KEY || '',
-    'X-RapidAPI-Host': process.env.REACT_APP_API_HOST || ''
+    'X-Api-Key': process.env.REACT_APP_API_KEY || '',
+    // 'X-RapidAPI-Host': process.env.REACT_APP_API_HOST || ''
 };
 // set
 axios.defaults.baseURL = process.env.REACT_APP_API_URL;

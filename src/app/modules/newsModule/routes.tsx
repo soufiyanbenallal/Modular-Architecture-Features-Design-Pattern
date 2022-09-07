@@ -1,10 +1,10 @@
 import React from 'react'
-import ArticlePage from "./index";
+import NewsPage from "./index";
 
 const routes = [
     {
-        path:'/article',
-        element: <ArticlePage />
+        path:'/news',
+        element: <NewsPage />
     }
 ];
 

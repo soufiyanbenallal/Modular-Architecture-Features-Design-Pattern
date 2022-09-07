@@ -1,7 +1,7 @@
 import newsSlice from '@modules/newsModule/store/slices/newsSlice'
 
 const newsReducers = {
-    posts: newsSlice,
+    news: newsSlice,
     // Other reducers for this module... 
 }
 export default newsReducers

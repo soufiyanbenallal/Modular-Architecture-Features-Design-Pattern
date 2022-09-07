@@ -1,16 +1,21 @@
 import { call, put } from "redux-saga/effects";
-import { requestGetNews } from "../requests/newsRequests";
-import { getNewsFailure, getNewsSuccess } from "../../slices/newsSlice";
+import { requestGetNewsEverything } from "@modules/newsModule/store/saga/requests/newsRequests";
+import { getNewsFailure, getNewsSuccess } from "@modules/newsModule/store/slices/newsSlice";
+import { IQueryParams } from "@modules/newsModule/interfaces/paramsInterface";
+import { IEndpointCallNews } from "@modules/newsModule/interfaces/endpointInterface";
+import { IErrorEvent } from "@shared/interfaces/errors/errorsInterface";
+import { errorResponseTransformer } from "@shared/helpers/errors/errorResponseTransformer";
 
 /**
  * handle news request saga
  */
 
-export function* handleGetNewsList(): Generator<any, any, unknown> {
+export function* handleGetNewsList(params: IQueryParams= {} ) {
   try {
-    const res = yield call(requestGetNews);
-    yield put(getNewsSuccess(res));
+    const res: {data: IEndpointCallNews} = yield call(({payload}) => requestGetNewsEverything(payload), params);
+    yield put(getNewsSuccess(res.data));
   } catch (error) {
-    yield put(getNewsFailure(error));
+    const errorParsed = errorResponseTransformer(error as unknown as IErrorEvent)
+    yield put(getNewsFailure(errorParsed));
   }
 }
