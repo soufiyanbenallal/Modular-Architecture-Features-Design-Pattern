@@ -1,10 +1,10 @@
 import React from 'react'
-import LandingPage from "./index";
+const LandingPage = React.lazy(() => import('./index'));
 
 const routes = [
     {
         path:'/',
-        element: <LandingPage />
+        Component: LandingPage
     }
 ];
 export default routes

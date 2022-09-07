@@ -1,5 +1,5 @@
 import React from 'react'
-export default function index() {
+export default function Index() {
   return (
     <div className="py-16 bg-gray-50 overflow-hidden">
         <div className="container m-auto px-6 space-y-8 text-gray-500 md:px-12">

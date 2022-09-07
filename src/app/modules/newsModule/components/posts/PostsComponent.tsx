@@ -12,7 +12,7 @@ export default function PostsComponent() {
     useEffect(() => {
         const payload: IQueryParams = {
             pageSize: 10,
-            // q: "crypto",
+            q: "crypto",
         }
       dispatch(getNews(payload))
       console.log({data, error, loading});

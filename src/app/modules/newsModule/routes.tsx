@@ -1,10 +1,10 @@
 import React from 'react'
-import NewsPage from "./index";
+const NewsPage = React.lazy(() => import('./index'));
 
 const routes = [
     {
         path:'/news',
-        element: <NewsPage />
+        Component: NewsPage
     }
 ];
 
