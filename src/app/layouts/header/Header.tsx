@@ -1,243 +1,27 @@
-import React, { useState } from 'react'
-export const Nav = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
-    return (
-      <div className="bg-gray-900">
-        <div className="px-4 py-6 mx-auto lg:py-8 sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
-          <div className="relative flex items-center justify-between lg:justify-center lg:space-x-16">
-            <ul className="flex items-center hidden space-x-8 lg:flex">
-              <li>
-                <a
-                  href="/"
-                  aria-label="Our product"
-                  title="Our product"
-                  className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
-                >
-                  Product
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/"
-                  aria-label="Our product"
-                  title="Our product"
-                  className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
-                >
-                  Features
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/"
-                  aria-label="Product pricing"
-                  title="Product pricing"
-                  className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
-                >
-                  Pricing
-                </a>
-              </li>
-            </ul>
-            <a
-              href="/"
-              aria-label="Company"
-              title="Company"
-              className="inline-flex items-center"
-            >
-              <svg
-                className="w-8 text-teal-accent-400"
-                viewBox="0 0 24 24"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeMiterlimit="10"
-                stroke="currentColor"
-                fill="none"
-              >
-                <rect x="3" y="1" width="7" height="12" />
-                <rect x="3" y="17" width="7" height="6" />
-                <rect x="14" y="1" width="7" height="6" />
-                <rect x="14" y="11" width="7" height="12" />
-              </svg>
-              <span className="ml-2 text-xl font-bold tracking-wide text-gray-100 uppercase">
-                Company
-              </span>
-            </a>
-            <ul className="flex items-center hidden space-x-8 lg:flex">
-              <li>
-                <a
-                  href="/"
-                  aria-label="About us"
-                  title="About us"
-                  className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
-                >
-                  About us
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/"
-                  aria-label="Sign in"
-                  title="Sign in"
-                  className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
-                >
-                  Sign in
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/"
-                  aria-label="Sign up"
-                  title="Sign up"
-                  className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
-                >
-                  Sign up
-                </a>
-              </li>
-            </ul>
-            <div className="lg:hidden">
-              <button
-                aria-label="Open Menu"
-                title="Open Menu"
-                className="p-2 -mr-1 transition duration-200 rounded focus:outline-none focus:shadow-outline"
-                onClick={() => setIsMenuOpen(true)}
-              >
-                <svg className="w-5 text-gray-600" viewBox="0 0 24 24">
-                  <path
-                    fill="currentColor"
-                    d="M23,13H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,13,23,13z"
-                  />
-                  <path
-                    fill="currentColor"
-                    d="M23,6H1C0.4,6,0,5.6,0,5s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,6,23,6z"
-                  />
-                  <path
-                    fill="currentColor"
-                    d="M23,20H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,20,23,20z"
-                  />
-                </svg>
-              </button>
-              {isMenuOpen && (
-                <div className="absolute top-0 left-0 w-full">
-                  <div className="p-5 bg-white border rounded shadow-sm">
-                    <div className="flex items-center justify-between mb-4">
-                      <div>
-                        <a
-                          href="/"
-                          aria-label="Company"
-                          title="Company"
-                          className="inline-flex items-center"
-                        >
-                          <svg
-                            className="w-8 text-deep-purple-accent-400"
-                            viewBox="0 0 24 24"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeMiterlimit="10"
-                            stroke="currentColor"
-                            fill="none"
-                          >
-                            <rect x="3" y="1" width="7" height="12" />
-                            <rect x="3" y="17" width="7" height="6" />
-                            <rect x="14" y="1" width="7" height="6" />
-                            <rect x="14" y="11" width="7" height="12" />
-                          </svg>
-                          <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-                            Company
-                          </span>
-                        </a>
-                      </div>
-                      <div>
-                        <button
-                          aria-label="Close Menu"
-                          title="Close Menu"
-                          className="p-2 -mt-2 -mr-2 transition duration-200 rounded hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-                          onClick={() => setIsMenuOpen(false)}
-                        >
-                          <svg className="w-5 text-gray-600" viewBox="0 0 24 24">
-                            <path
-                              fill="currentColor"
-                              d="M19.7,4.3c-0.4-0.4-1-0.4-1.4,0L12,10.6L5.7,4.3c-0.4-0.4-1-0.4-1.4,0s-0.4,1,0,1.4l6.3,6.3l-6.3,6.3 c-0.4,0.4-0.4,1,0,1.4C4.5,19.9,4.7,20,5,20s0.5-0.1,0.7-0.3l6.3-6.3l6.3,6.3c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3 c0.4-0.4,0.4-1,0-1.4L13.4,12l6.3-6.3C20.1,5.3,20.1,4.7,19.7,4.3z"
-                            />
-                          </svg>
-                        </button>
-                      </div>
-                    </div>
-                    <nav>
-                      <ul className="space-y-4">
-                        <li>
-                          <a
-                            href="/"
-                            aria-label="Our product"
-                            title="Our product"
-                            className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                          >
-                            Product
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            href="/"
-                            aria-label="Our product"
-                            title="Our product"
-                            className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                          >
-                            Features
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            href="/"
-                            aria-label="Product pricing"
-                            title="Product pricing"
-                            className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                          >
-                            Pricing
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            href="/"
-                            aria-label="About us"
-                            title="About us"
-                            className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                          >
-                            About us
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            href="/"
-                            aria-label="Sign in"
-                            title="Sign in"
-                            className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                          >
-                            Sign in
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            href="/"
-                            className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-                            aria-label="Sign up"
-                            title="Sign up"
-                          >
-                            Sign up
-                          </a>
-                        </li>
-                      </ul>
-                    </nav>
-                  </div>
-                </div>
-              )}
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  };
+import React from 'react'
+import { Link } from 'react-router-dom'
+
 export default function Header() {
   return (
-   <Nav></Nav>
+    <header className="h-24 sm:h-32 flex items-center z-30 w-full">
+    <div className="container mx-auto px-6 flex items-center justify-between">
+        <div className="uppercase text-gray-800 dark:text-white font-black text-3xl flex items-center">
+            <svg width="25" height="25" viewBox="0 0 1792 1792" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1664 1504v-768q-32 36-69 66-268 206-426 338-51 43-83 67t-86.5 48.5-102.5 24.5h-2q-48 0-102.5-24.5t-86.5-48.5-83-67q-158-132-426-338-37-30-69-66v768q0 13 9.5 22.5t22.5 9.5h1472q13 0 22.5-9.5t9.5-22.5zm0-1051v-24.5l-.5-13-3-12.5-5.5-9-9-7.5-14-2.5h-1472q-13 0-22.5 9.5t-9.5 22.5q0 168 147 284 193 152 401 317 6 5 35 29.5t46 37.5 44.5 31.5 50.5 27.5 43 9h2q20 0 43-9t50.5-27.5 44.5-31.5 46-37.5 35-29.5q208-165 401-317 54-43 100.5-115.5t46.5-131.5zm128-37v1088q0 66-47 113t-113 47h-1472q-66 0-113-47t-47-113v-1088q0-66 47-113t113-47h1472q66 0 113 47t47 113z">
+                </path>
+            </svg>
+            <span className="text-xs ml-3 mt-1">
+                benallalsoufiane1@gmail.com
+            </span>
+        </div>
+        <div className="flex items-center">
+            <nav className="font-sen text-gray-800 dark:text-white uppercase text-lg flex items-center">
+              <Link to='/' className="py-2 px-6 flex hover:text-black">
+                  News
+              </Link>
+            </nav>
+        </div>
+    </div>
+</header>
   )
 }

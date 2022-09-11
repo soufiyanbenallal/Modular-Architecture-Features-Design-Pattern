@@ -1,72 +1,30 @@
 import React from 'react'
+import Layout from '@layouts/Layout'
+import LatestNewsComponent from './components/latestNewsComponent/LatestNewsComponent'
+import HeroComponent from './components/heroComponent/heroComponent'
 export default function Index() {
   return (
-    <div className="py-16 bg-gray-50 overflow-hidden">
-        <div className="container m-auto px-6 space-y-8 text-gray-500 md:px-12">
-            <div>
-                <span className="text-gray-600 text-lg font-semibold">Main features</span>
-                <h2 className="mt-4 text-2xl text-gray-900 font-bold md:text-4xl">A technology-first approach to payments <br className="lg:block" hidden /> and finance</h2>
+    <Layout>
+        <div className="hidden md:block absolute -bottom-32 -left-32 w-96 h-96">
+            <div className="absolute text-extrabold text-xl right-12 z-20 text-start top-1/4">
+                <span className="text-7xl">
+                    🎨
+                </span>
+                <p>
+                    Got a project ?
+                </p>
+                <a href="#" className="underline">
+                    Let&#x27;s talk
+                </a>
             </div>
-            <div className="mt-16 grid border divide-x divide-y rounded-xl overflow-hidden sm:grid-cols-2 lg:divide-y-0 lg:grid-cols-3 xl:grid-cols-4">
-                <div className="relative group bg-white transition hover:z-[1] hover:shadow-2xl">
-                    <div className="relative p-8 space-y-8">
-                        <img src="images/avatars/burger.png" className="w-10" width="512" height="512" alt="burger illustration" />
-                        
-                        <div className="space-y-2">
-                            <h5 className="text-xl text-gray-800 font-medium transition group-hover:text-yellow-600">First feature</h5>
-                            <p className="text-sm text-gray-600">Neque Dolor, fugiat non cum doloribus aperiam voluptates nostrum.</p>
-                        </div>
-                        <a href="#" className="flex justify-between items-center group-hover:text-yellow-600">
-                            <span className="text-sm">Read more</span>
-                            <span className="-translate-x-4 opacity-0 text-2xl transition duration-300 group-hover:opacity-100 group-hover:translate-x-0">&RightArrow;</span>
-                        </a>
-                    </div>
-                </div>
-                <div className="relative group bg-white transition hover:z-[1] hover:shadow-2xl">
-                    <div className="relative p-8 space-y-8">
-                        <img src="images/avatars/trowel.png" className="w-10" width="512" height="512" alt="burger illustration" />
-                        
-                        <div className="space-y-2">
-                            <h5 className="text-xl text-gray-800 font-medium transition group-hover:text-yellow-600">Second feature</h5>
-                            <p className="text-sm text-gray-600">Neque Dolor, fugiat non cum doloribus aperiam voluptates nostrum.</p>
-                        </div>
-                        <a href="#" className="flex justify-between items-center group-hover:text-yellow-600">
-                            <span className="text-sm">Read more</span>
-                            <span className="-translate-x-4 opacity-0 text-2xl transition duration-300 group-hover:opacity-100 group-hover:translate-x-0">&RightArrow;</span>
-                        </a>
-                    </div>
-                </div>
-                <div className="relative group bg-white transition hover:z-[1] hover:shadow-2xl">
-                    <div className="relative p-8 space-y-8">
-                        <img src="images/avatars/package-delivery.png" className="w-10" width="512" height="512" alt="burger illustration" />
-                        
-                        <div className="space-y-2">
-                            <h5 className="text-xl text-gray-800 font-medium transition group-hover:text-yellow-600">Third feature</h5>
-                            <p className="text-sm text-gray-600">Neque Dolor, fugiat non cum doloribus aperiam voluptates nostrum.</p>
-                        </div>
-                        <a href="#" className="flex justify-between items-center group-hover:text-yellow-600">
-                            <span className="text-sm">Read more</span>
-                            <span className="-translate-x-4 opacity-0 text-2xl transition duration-300 group-hover:opacity-100 group-hover:translate-x-0">&RightArrow;</span>
-                        </a>
-                    </div>
-                </div>
-                <div className="relative group bg-gray-100 transition hover:z-[1] hover:shadow-2xl lg:hidden xl:block">
-                    <div className="relative p-8 space-y-8 border-dashed rounded-lg transition duration-300 group-hover:bg-white group-hover:border group-hover:scale-90">
-                        <img src="images/avatars/metal.png" className="w-10" width="512" height="512" alt="burger illustration" />
-                        
-                        <div className="space-y-2">
-                            <h5 className="text-xl text-gray-800 font-medium transition group-hover:text-yellow-600">More features</h5>
-                            <p className="text-sm text-gray-600">Neque Dolor, fugiat non cum doloribus aperiam voluptates nostrum.</p>
-                        </div>
-                        <a href="#" className="flex justify-between items-center group-hover:text-yellow-600">
-                            <span className="text-sm">Read more</span>
-                            <span className="-translate-x-4 opacity-0 text-2xl transition duration-300 group-hover:opacity-100 group-hover:translate-x-0">&RightArrow;</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
+            <svg viewBox="0 0 200 200" className="absolute w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#FFDBB9" d="M44.7,-76.4C58.8,-69.2,71.8,-59.1,79.6,-45.8C87.4,-32.6,90,-16.3,88.5,-0.9C87,14.6,81.4,29.2,74.1,43.2C66.7,57.2,57.6,70.6,45,78.1C32.4,85.6,16.2,87.1,0.7,85.9C-14.8,84.7,-29.6,80.9,-43.9,74.4C-58.3,67.9,-72,58.7,-79.8,45.9C-87.7,33,-89.5,16.5,-88.9,0.3C-88.4,-15.9,-85.4,-31.7,-78.1,-45.4C-70.8,-59.1,-59.1,-70.6,-45.3,-77.9C-31.6,-85.3,-15.8,-88.5,-0.3,-88.1C15.3,-87.6,30.5,-83.5,44.7,-76.4Z" transform="translate(100 100)">
+                </path>
+            </svg>
         </div>
-    </div>   
-                                
+
+        <HeroComponent />
+        <LatestNewsComponent />
+    </Layout>       
   )
 }
