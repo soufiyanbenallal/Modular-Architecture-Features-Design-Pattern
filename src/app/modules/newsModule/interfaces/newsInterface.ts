@@ -16,5 +16,5 @@ export interface IArticle {
 }
 
 export interface INewsState extends IBasicState {
-    data: IEndpointCallNews | {}
+    data: IEndpointCallNews | Record<string, unknown>
 }

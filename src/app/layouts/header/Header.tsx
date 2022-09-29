@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 export default function Header() {
   return (
-    <header className="h-24 sm:h-32 flex items-center z-30 w-full">
+    <header className="h-24 sm:h-32 flex items-center z-30 w-full absolute top-0 left-0">
     <div className="container mx-auto px-6 flex items-center justify-between">
         <div className="uppercase text-gray-800 dark:text-white font-black text-3xl flex items-center">
             <svg width="25" height="25" viewBox="0 0 1792 1792" fill="currentColor" xmlns="http://www.w3.org/2000/svg">

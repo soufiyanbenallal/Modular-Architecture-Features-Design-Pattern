@@ -13,7 +13,7 @@ export default function HeroComponent() {
                     This is demo a website provide modular architecture using blog as example 
                 </h2>
                 <div className="flex items-center justify-center mt-4">
-                    <a href="https://www.buymeacoffee.com/soufiyan" target="_blank" rel="noreferrer" >
+                    <a href="https://www.buymeacoffee.com/soufiyan" target="_blank" rel="noreferrer" className=' ' >
                         <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" className='h-14 mt-6 relative' alt="Buy Me A Coffee" />
                     </a>
                 </div>
